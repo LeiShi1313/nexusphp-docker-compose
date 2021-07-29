@@ -1,0 +1,5 @@
+FROM mysql:5.7
+
+LABEL maintainer="Maintainer - Lei Shi"
+
+COPY ./nexusphp/_db/dbstructure_v1.6.sql /docker-entrypoint-initdb.d/dbstructure.sql

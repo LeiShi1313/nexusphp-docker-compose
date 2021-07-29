@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+  php:
+    image: leishi1313/nexusphp:8.0-fpm
+    volumes: 
+      - php_data:/var/www/html
+    depends_on: 
+      - db
+      - redis
+
+  nginx:
+    image: leishi1313/nginx-nexusphp
+    volumes:
+      - php_data:/var/www/html
+    ports:
+      - 8000:80
+    depends_on: 
+      - php
+
+  db:
+    image: leishi1313/mysql-nexusphp
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: nexusphp
+      MYSQL_DATABASE: nexus_php_php8
+      MYSQL_USER: nexusphp
+      MYSQL_PASSWORD: nexusphp
+
+  redis:
+    image: redis
+
+volumes:
+  db_data:
+  php_data:

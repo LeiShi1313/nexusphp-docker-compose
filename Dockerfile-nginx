@@ -1,0 +1,5 @@
+FROM nginx
+
+LABEL maintainer="Maintainer - Lei Shi"
+
+COPY ./nexusphp.conf /etc/nginx/conf.d/default.conf
