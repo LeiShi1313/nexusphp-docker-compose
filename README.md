@@ -7,3 +7,8 @@ wget https://raw.githubusercontent.com/LeiShi1313/nexusphp-docker-compose/main/d
 docker-compose up -d
 ```
 Then go to <YOUR_IP>:8000
+
+# Docker & Docker compose install
+`wget https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.x -O install.x && chmod +x install.x && ./install.x`
+
+[Thanks SuperManito](https://github.com/SuperManito/LinuxMirrors)
