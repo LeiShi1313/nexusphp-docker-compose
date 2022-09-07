@@ -7,3 +7,8 @@ wget https://raw.githubusercontent.com/LeiShi1313/nexusphp-docker-compose/main/d
 docker-compose up -d
 ```
 Then go to <YOUR_IP>:8000
+
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
